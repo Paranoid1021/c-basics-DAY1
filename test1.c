@@ -1,14 +1,13 @@
 #include <stdio.h>
 
 int main() {
-    char a;
-    int b = 10;
+    char name[100];//字符数组，100个字节足够存30多个汉字
 
-    printf("请输入一个字母\n");
-    scanf(" %c", &a); // 加空格跳过空白字符
+    printf("请输入你的中文名：\n");
+    scanf(" %s", name); 
+    // 数组名 name 本身代表地址，scanf 里无需添加取地址符 &
 
-    printf("你输入的字符是：%c\n", a);
-    printf("变量 b 的值是：%d\n", b);
-    
+    printf("你的中文名是：%s\n", name);
+
     return 0;
 }
