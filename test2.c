@@ -11,6 +11,8 @@ int main() {
     printf("整数 a + 浮点数 c = %f\n", a + c);
     printf("整数 a + 双精度数 d = %lf\n", a + d);
     printf("整数 a + 字符 e = %d\n", a + e);
+    // 字符 e会被转换为对应的ASCII码值进行运算
+    // 'A'的ASCII码值为65
 
     printf("浮点数 c + 双精度数 d = %lf\n", c + d);
     printf("浮点数 c + 字符 e = %f\n", c + e);
@@ -25,6 +27,10 @@ int main() {
 
     printf("整数 a * 整数 b = %d\n", a * b);
     printf("整数 a * 浮点数 c = %f\n", a * c);
+    // 整数与浮点数相乘，结果为浮点数
+    // %f默认输出6位小数
+    printf("整数 a * 浮点数 c = %.2f\n", a * c);
+    // 控制输出小数位数可以使用%.nf，n为小数位数
     printf("整数 a * 双精度数 d = %lf\n", a * d);
     printf("整数 a * 字符 e = %d\n", a * e);
 
@@ -32,6 +38,9 @@ int main() {
     printf("浮点数 c * 字符 e = %f\n", c * e);
 
     printf("整数 a / 整数 b = %d\n", a / b);
+    // 整数除法会舍弃小数部分
+    printf("整数 a / 整数 b (强制类型转换)= %.2f\n", (float)a / (float)b);
+    // 强制类型转换可以保留小数部分
     printf("整数 a / 浮点数 c = %f\n", a / c);
     printf("整数 a / 双精度数 d = %lf\n", a / d);
     printf("整数 a / 字符 e = %d\n", a / e);
